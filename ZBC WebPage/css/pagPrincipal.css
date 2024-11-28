@@ -1,0 +1,74 @@
+
+#p1{
+	background-color:lightgrey;
+	  font-family: sans-serif;
+  font-size: 25px;
+  	  width: 90%;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-style:oblique;
+  display:block;
+}
+
+article{
+		background-color:lightgrey;
+	  width: 20%;
+	  height:325px;
+float:left;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+
+
+}
+.nombre{
+	font-style:oblique;
+	font-weight:bold;
+	font-size:12px;
+}
+.descripcion{
+	height:35%;
+}
+.imagenypr{
+	display:block;
+}
+.pr{
+	float:right;
+	position:relative;
+	
+}
+.iva{
+	text-align:right;
+}
+
+.precio{
+	text-align:right;
+	position:relative;
+}
+.button{
+	position:relative;
+
+}
+.button:hover{opacity: 0.5
+}
+
+
+.imagen	{
+		  position:relative;
+		  	
+			bottom:0px;	
+	  border: 2px solid black;
+	float:left;
+		width:40%;
+}
+.NumUnidades{
+
+}
+.TextoNumUnidades{
+	font-size:10px;
+	display:inline-block;
+}
+.textoyuni{
+	
+}

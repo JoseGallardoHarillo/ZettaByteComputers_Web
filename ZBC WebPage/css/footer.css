@@ -1,0 +1,40 @@
+.imagenPie{
+
+	float:left;
+		width:100px;
+		height: 100px;
+}
+
+.Op{
+	float:left;
+width:90%;
+height:100px;
+	background:lightgrey;
+	margin:10px;
+	  border: 5px solid black;
+  padding: 10px;
+}
+
+.Op ul{
+	 list-style: none;
+	 font-size: 20px;
+}
+
+.Op li{
+	position:static;
+	display:inline-block;
+}
+
+.Op li a{
+	padding:15px 20px;
+	
+	color: black;
+}
+
+.barraDePie{
+	 text-align:center;
+	 width: 83%;
+}
+.copy{
+	float:right;
+}

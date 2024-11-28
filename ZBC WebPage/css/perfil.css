@@ -1,0 +1,55 @@
+.botonperfil{
+    
+	text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 6px;
+    border: 2px solid black;
+  }
+
+div.cajaperfil{
+  text-align: center;
+  margin: auto;
+  width:50%;
+  background: rgba(0,0,0,0.5);
+  border: 3px solid black;
+}
+
+div.cajaperfil2 {
+  text-align: center;
+  margin: auto;
+  background-color: #ffffff;
+  border: 2px solid black;
+  background: rgba(0,0,0,0.5);
+
+}
+
+.botondesactivar{
+    
+    bottom:25px;
+	margin: bottom;
+	text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 6px;
+    border: 2px solid black;
+  }
+  
+ .perfil {
+ 	text-align: center;
+    border: 1px solid black;
+	color:#FFFFFF;
+	width:50%;
+	height:80%;
+	background: rgba(0,0,0,0.5);
+	margin:auto;
+	font-family:fantasy;
+	font-size:20px;
+	}
+  

@@ -1,0 +1,210 @@
+----------------ELIMINACIÓN DE TODAS LAS SECUENCIAS------------------------------
+DROP SEQUENCE sec_proveedores;
+DROP SEQUENCE sec_usuarios;
+DROP SEQUENCE sec_localizaciones;
+DROP SEQUENCE sec_productos;
+
+DROP SEQUENCE sec_fotos;
+DROP SEQUENCE sec_pedidos;
+DROP SEQUENCE sec_asoc_p_p;
+DROP SEQUENCE sec_ejemplares;
+DROP SEQUENCE sec_clientes;
+DROP SEQUENCE sec_telefonos;
+DROP SEQUENCE sec_datos_pago;
+
+DROP SEQUENCE sec_ventas;
+DROP SEQUENCE sec_asoc_v_p;
+DROP SEQUENCE sec_devoluciones;
+DROP SEQUENCE sec_facturas;
+DROP SEQUENCE sec_empleados;
+DROP SEQUENCE sec_nominas;
+DROP SEQUENCE sec_gastos;
+DROP SEQUENCE sec_provincias;
+/
+    
+CREATE SEQUENCE sec_proveedores MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_usuarios MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_localizaciones MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_productos MINVALUE 0 INCREMENT BY 1 START WITH 0;
+
+CREATE SEQUENCE sec_provincias MINVALUE 0 INCREMENT BY 1 START WITH 0;
+
+
+CREATE SEQUENCE sec_fotos MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_pedidos MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_asoc_p_p MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_ejemplares MINVALUE 0 INCREMENT BY 1 START WITH 0;
+
+CREATE SEQUENCE sec_clientes MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_telefonos MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_ventas MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_asoc_v_p MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_devoluciones MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_facturas MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_empleados MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_nominas MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_gastos MINVALUE 0 INCREMENT BY 1 START WITH 0;
+CREATE SEQUENCE sec_datos_pago MINVALUE 0 INCREMENT BY 1 START WITH 0;
+
+/
+
+CREATE OR REPLACE TRIGGER siguiente_oid_proveedor
+    BEFORE INSERT ON PROVEEDORES FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_PROVEEDOR IS NULL THEN
+                SELECT sec_proveedores.NEXTVAL INTO :NEW.OID_PROVEEDOR FROM DUAL;
+            END IF;
+        END;
+/
+CREATE OR REPLACE TRIGGER siguiente_oid_usuario
+    BEFORE INSERT ON USUARIOS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_USUARIO IS NULL THEN
+                SELECT sec_usuarios.NEXTVAL INTO :NEW.OID_USUARIO FROM DUAL;
+            END IF;
+        END;
+/
+CREATE OR REPLACE TRIGGER siguiente_oid_localizacion
+    BEFORE INSERT ON LOCALIZACIONES FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_L IS NULL THEN
+                SELECT sec_localizaciones.NEXTVAL INTO :NEW.OID_L FROM DUAL;
+            END IF;
+        END;
+/
+CREATE OR REPLACE TRIGGER siguiente_oid_producto
+    BEFORE INSERT ON PRODUCTOS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_PRODUCTO IS NULL THEN
+                SELECT sec_productos.NEXTVAL INTO :NEW.OID_PRODUCTO FROM DUAL;
+            END IF;
+        END;
+/
+CREATE OR REPLACE TRIGGER siguiente_oid_foto
+    BEFORE INSERT ON FOTOS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_FOTO IS NULL THEN
+                SELECT sec_fotos.NEXTVAL INTO :NEW.OID_FOTO FROM DUAL;
+            END IF;
+        END;
+/       
+CREATE OR REPLACE TRIGGER siguiente_oid_pedido
+    BEFORE INSERT ON PEDIDOS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_PED IS NULL THEN 
+                SELECT sec_pedidos.NEXTVAL INTO :NEW.OID_PED FROM DUAL;
+            END IF;
+        END;
+/
+CREATE OR REPLACE TRIGGER siguiente_oid_asoc_p_p
+    BEFORE INSERT ON ASOC_P_P FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_P_P IS NULL THEN
+                SELECT sec_asoc_p_p.NEXTVAL INTO :NEW.OID_P_P FROM DUAL;
+            END IF;
+        END;
+/        
+CREATE OR REPLACE TRIGGER siguiente_oid_ejemplar
+    BEFORE INSERT ON EJEMPLARES FOR EACH ROW
+        BEGIN
+        IF :NEW.OID_EJ IS NULL THEN 
+            SELECT sec_ejemplares.NEXTVAL INTO :NEW.OID_EJ FROM DUAL;
+            END IF;
+        END;
+/
+CREATE OR REPLACE TRIGGER siguiente_oid_cliente
+    BEFORE INSERT ON CLIENTES FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_CLIENTE IS NULL THEN
+                SELECT sec_clientes.NEXTVAL INTO :NEW.OID_CLIENTE FROM DUAL;
+            END IF;
+        END;
+/        
+CREATE OR REPLACE TRIGGER siguiente_oid_telefono
+    BEFORE INSERT ON TELEFONOS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_T IS NULL THEN
+                SELECT sec_telefonos.NEXTVAL INTO :NEW.OID_T FROM DUAL;
+            END IF;
+        END;
+/        
+CREATE OR REPLACE TRIGGER siguiente_oid_venta
+    BEFORE INSERT ON VENTAS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_V IS NULL THEN
+                SELECT sec_ventas.NEXTVAL INTO :NEW.OID_V FROM DUAL;
+            END IF;
+        END;
+/        
+CREATE OR REPLACE TRIGGER siguiente_oid_asoc_v_p
+    BEFORE INSERT ON ASOC_V_P FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_V_P IS NULL THEN 
+                SELECT sec_asoc_v_p.NEXTVAL INTO :NEW.OID_V_P FROM DUAL;
+            END IF;
+        END;
+/        
+CREATE OR REPLACE TRIGGER siguiente_oid_devolucion
+    BEFORE INSERT ON DEVOLUCIONES FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_D IS NULL THEN
+                SELECT sec_devoluciones.NEXTVAL INTO :NEW.OID_D FROM DUAL;
+            END IF;
+        END;
+/ 
+
+CREATE OR REPLACE TRIGGER siguiente_oid_datos_pago
+    BEFORE INSERT ON DATOS_PAGO_VENTA FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_DATOS_PAGO IS NULL THEN
+                SELECT sec_datos_pago.NEXTVAL INTO :NEW.OID_DATOS_PAGO FROM DUAL;
+            END IF;
+        END;
+/        
+CREATE OR REPLACE TRIGGER siguiente_oid_factura
+    BEFORE INSERT ON FACTURAS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_FAC IS NULL THEN
+                SELECT sec_facturas.NEXTVAL INTO :NEW.OID_FAC FROM DUAL;
+            END IF;
+        END;
+/
+CREATE OR REPLACE TRIGGER siguiente_oid_empleado
+    BEFORE INSERT ON EMPLEADOS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_EMPLEADO IS NULL THEN
+                SELECT sec_empleados.NEXTVAL INTO :NEW.OID_EMPLEADO FROM DUAL;
+            END IF;
+        END;
+/
+CREATE OR REPLACE TRIGGER siguiente_oid_nomina
+    BEFORE INSERT ON NOMINAS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_N IS NULL THEN
+                SELECT sec_nominas.NEXTVAL INTO :NEW.OID_N FROM DUAL;
+            END IF;
+        END;
+/        
+CREATE OR REPLACE TRIGGER siguiente_oid_gasto
+    BEFORE INSERT ON GASTOS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_G IS NULL THEN
+                SELECT sec_nominas.NEXTVAL INTO :NEW.OID_G FROM DUAL;
+            END IF;
+        END;
+
+
+/        
+CREATE OR REPLACE TRIGGER siguiente_provincia
+    BEFORE INSERT ON PROVINCIAS FOR EACH ROW
+        BEGIN
+            IF :NEW.OID_P IS NULL THEN
+                SELECT sec_provincias.NEXTVAL INTO :NEW.OID_P FROM DUAL;
+            END IF;
+        END;
+
+
+
+
+
+

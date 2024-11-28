@@ -1,0 +1,36 @@
+.menuNavegacionPaginas{
+	position:relative;
+	display:inline-block;
+	width:90%;
+	background:lightgrey;
+	margin:10px;
+	  border: 5px solid black;
+  padding: 10px;
+	
+	
+}
+.textoPags{
+	width:33%;
+	position:relative;
+	text-align: :center;
+	display:inline-block;
+	
+	
+}
+
+.enlaces{
+	width:33%;
+
+	position:relative;
+	text-align: :center;
+	display:inline-block;
+	
+}
+.formularioCambiarPagina{
+		width:30%;
+		display:inline-block;
+		right: 100%;
+}
+.parrafoPE{
+	display:inline-block;
+}

@@ -1,0 +1,51 @@
+.Bienvenido{
+	background-color:lightgrey;
+	  font-family: sans-serif;
+  font-size: 25px;
+  	  width: 90%;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-style:oblique;
+  display:block;
+}
+.contenidoPrincipal{
+	  	  width: 90%;
+	  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  background-color:lightgrey;
+}
+.texto1{
+	  font-style:oblique;
+	font-weight:bold;
+	
+}
+
+.texto2{
+	width:30%;
+		position:relative;
+	display:inline-block;	
+			  font-style:oblique;
+	font-weight:bold;
+}
+.boton{
+	width:30%;
+	position:relative;
+	display:inline-block;
+}
+.clave{
+		width:30%;
+
+	position:relative;
+	display:inline-block;
+		  font-style:oblique;
+	font-weight:bold;
+	
+}
+.valor{
+		width:30%;
+
+	position:relative;
+	display:inline-block;	
+}

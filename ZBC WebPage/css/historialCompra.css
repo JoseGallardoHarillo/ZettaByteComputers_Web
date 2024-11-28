@@ -1,0 +1,37 @@
+.elemento{
+	  	  width: 90%;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  background-color:lightgrey;
+}
+.titulo{
+		 font-family: sans-serif;
+	 font-size: 20px;
+	 font-weight:bold;
+}
+.dato{
+		 font-family: sans-serif;
+  font-style:oblique;
+  position:relative
+}
+.Importe{
+			 font-family: sans-serif;
+	 font-size: 20px;
+	 font-weight:bold;
+}
+.imagen{
+	
+	width:20%;
+		  border: 2px solid black;
+	position:relative;
+	display:inline;
+}
+
+.divChico{
+	left:50px;
+	bottom:30px;
+		position:relative;
+		display: inline-block;
+}
+

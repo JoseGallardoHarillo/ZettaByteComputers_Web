@@ -1,0 +1,133 @@
+label{
+  display: inline-block;
+  width: 80px;
+}
+
+label {
+  font : .8em "typewriter", sans-serif;
+  width:100%;
+}
+
+input {
+    height: 2.5em; 
+    vertical-align: middle; 
+}
+
+
+
+.lineatexto, textarea {
+  font    : .9em/1.5em "handwriting", sans-serif;
+
+  
+  padding : 0 10px;
+  margin  : 0;
+  width   : 340px;
+
+  background: none;
+}
+
+.lineatexto{
+	color:white;
+}
+
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,0.1);
+  border-radius: 5px;
+  outline      : none;
+}
+
+textarea {
+  display : block;
+
+  padding : 10px;
+  margin  : 10px 0 0 -10px;
+  width   : 340px;
+  height  : 360px;
+
+  resize  : none;
+  overflow: auto;
+}
+
+.envio {
+  position     : absolute;
+  left         : 440px;
+  top          : 360px;
+
+  padding      : 5px;
+
+  font         : bold .6em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : none;
+
+  cursor       : pointer;
+
+-webkit-transform: rotate(-1.5deg);
+   -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+     -o-transform: rotate(-1.5deg);
+        transform: rotate(-1.5deg);
+}
+
+.envio:after {
+  content: " >>>";
+}
+
+.envio:hover,
+.envio:focus {
+  outline   : none;
+  background: #000;
+  color   : #FFF;
+}
+
+
+
+
+
+
+div.contenedorPrincipalLogin{
+  margin: auto;
+  width:50%;
+  background: rgba(0,0,0,0.5);
+  border: 2px solid black;
+}
+
+div.transboxLogin {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  background: rgba(0,0,0,0.5);
+
+}
+
+.login {
+	color:#FFFFFF;
+	width:50%;
+	background: rgba(0,0,0,0.5);
+	margin:auto;
+	font-family:fantasy;
+	font-size:20px;
+	}
+.error{
+	color:red;
+	font-size:80%;
+}
+.selectCompra {
+  font    : .9em/1.5em "handwriting", sans-serif;
+
+  
+  padding : 0 10px;
+  margin  : 0;
+  width   : 340px;
+
+  background: none;
+  color: white;
+  background-color: #333	;
+}
+.fotoInterrogante{
+	max-width:25px;
+		max-height:25px;
+		float:right;
+  margin: 3px;
+
+}

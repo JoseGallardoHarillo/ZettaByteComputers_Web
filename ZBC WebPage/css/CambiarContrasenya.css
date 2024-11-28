@@ -1,0 +1,42 @@
+
+
+div.cajaC{
+  margin: auto;
+  width:50%;
+  background: rgba(0,0,0,0.5);
+  border: 2px solid black;
+}
+
+div.caja_cambiosC {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  background: rgba(0,0,0,0.5);
+
+}
+
+.camposC {
+	color:#FFFFFF;
+	width:50%;
+	height:80%;
+	background: rgba(0,0,0,0.5);
+	margin:auto;
+	font-size:20px;
+}
+
+.tituloC{
+	font-family:fantasy;
+}
+
+.Contr{
+	
+	color: white;
+	height: 2.5em; 
+    vertical-align: middle;
+    background-color:black;
+    margin:0px;
+    padding:0px 10px;
+    font: .9em/1.5em "handwriting", sans-serif; 
+
+}
+
